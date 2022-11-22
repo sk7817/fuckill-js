@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     mode: 'development',
     entry: {
-        fuckill: "./src/vue.js",
+        fuckill: "./src/fuckill.js",
     },
     output: {
         filename: "[name].js",

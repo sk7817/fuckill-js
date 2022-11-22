@@ -4,11 +4,13 @@
   "description": "",
   "main": "fuckill.js",
   "scripts": {
+    "dev": "webpack --watch --progress",
+    "dev-esm": "webpack --config webpack.build.js --watch --progress",
     "build": "webpack",
-    "build-esm":"webpack --config webpack.build.js",
-    "example":"webpack --config webpack.test.js"
+    "build-esm": "webpack --config webpack.build.js",
+    "example": "webpack --config webpack.test.js"
   },
-  "author": "",
+  "author": "sk",
   "license": "ISC",
   "devDependencies": {
     "html-webpack-plugin": "^5.3.2",

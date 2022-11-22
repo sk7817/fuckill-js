@@ -1,9 +1,14 @@
+/**
+ * this is fuckill js 
+ * author:sk
+ * following MIT license
+ */
+
 import { SubQueue } from "./sub"
 import Observer from "./observer"
-import Compile from "./compile"
+import Compile from "./compile"  
 
-
-function Vue(opts) {
+function Fuckill(opts) {
     if (!opts.el) return console.warn('请填写参数: el')
     opts.beforeCreate && opts.beforeCreate.call(this) // beforeCreate 钩子
     this.el = opts.el
@@ -15,7 +20,7 @@ function Vue(opts) {
     opts.mounted && opts.mounted.call(this) // mounted 钩子
 }
 
-Vue.prototype.init = function () {
+Fuckill.prototype.init = function () {
     Object.keys(this.data).forEach(key => {
         this.proxyKeys(key)
     })
@@ -24,7 +29,7 @@ Vue.prototype.init = function () {
     new Compile(this) // 节点解析
 }
 
-Vue.prototype.proxyKeys = function (attr) {
+Fuckill.prototype.proxyKeys = function (attr) {
     Object.defineProperty(this, attr, {
         enumerable: true,
         configurable: true,
@@ -38,4 +43,4 @@ Vue.prototype.proxyKeys = function (attr) {
     })
 }
 
-export default Vue
+export default Fuckill

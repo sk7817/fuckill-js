@@ -1,6 +1,12 @@
+/**
+ * this is fuckill js 
+ * author:sk
+ * following MIT license
+ */
+
 import { SubQueue } from "./sub"
 import Observer from "./observer"
-import Compile from "./compile"
+import Compile from "./compile" 
 
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory()  :
@@ -28,11 +34,11 @@ import Compile from "./compile"
         new Compile(this) // 节点解析
     }
 
-    Fuckill.prototype.proxyKeys = function (attr) {
+    Fuckill.prototype.proxyKeys = function (attr) {   
         Object.defineProperty(this, attr, {
             enumerable: true,
             configurable: true,
-            get() {
+            get() {  
                 return this.data[attr]
             },
             set(newVal) {

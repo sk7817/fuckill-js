@@ -12,7 +12,7 @@ Suber.prototype.get = function () {
     return value
 }
 
-Suber.prototype.update = function () {
+Suber.prototype.update = function () { 
     let value = this.getAttrVal(this.attr)
     if (value !== this.value) {
         this.cb && this.cb(value)
